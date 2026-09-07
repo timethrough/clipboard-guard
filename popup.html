@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>剪贴板守卫</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <header><div class="mark">盾</div><div><h1>剪贴板守卫</h1><p>复制有记录，粘贴先核对</p></div><span class="tag">严格模式</span></header>
+  <main>
+    <div class="status" id="coverage">正在检查当前页面…</div>
+    <section><div class="row"><h2>核对记录</h2><span id="lockState">未锁定</span></div><p id="baseline">正在读取…</p><p class="muted" id="source"></p><div class="buttons"><button id="lock" disabled>锁定记录</button><button id="clear" class="secondary">清除记录</button></div><p class="hint">锁定后，新复制的内容不会覆盖核对记录。锁定不会冻结系统剪贴板。</p></section>
+    <section><h2>手动核对</h2><p class="hint">来自其他程序的内容，请与可信原文逐字核对。不要把可疑内容直接设为可信。</p><button id="read" class="secondary wide">读取当前剪贴板并检查</button><textarea id="text" spellcheck="false" autocomplete="off" placeholder="也可以在此输入已核实的原文…" aria-label="待核对的完整文本"></textarea><p class="muted" id="details">文本只在此窗口显示，不保存原文。</p><div class="buttons"><button id="check" class="secondary">核对文本</button><button id="trust">确认可信并复制</button></div><p id="message" role="status" aria-live="polite"></p></section>
+    <footer><span id="blocked">不一致检测：0 次</span><a href="help.html" target="_blank" rel="noopener">使用说明与边界 ↗</a><p>纯本地 · 无联网 · 无复制历史</p></footer>
+  </main><script src="popup.js"></script>
+</body></html>

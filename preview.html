@@ -1,0 +1,9 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>当前剪贴板</title><link rel="stylesheet" href="preview.css"></head><body>
+<main id="panel">
+  <header><div id="drag-handle" role="button" tabindex="0" title="按住拖动；双击回到右下角；方向键移动" aria-label="移动悬浮条：拖动或使用方向键，Home 键复位"><span class="grip" aria-hidden="true">⠿</span><span class="dot" id="dot"></span><strong>当前剪贴板</strong><span id="count"></span></div><button id="refresh" title="立即读取剪贴板" aria-label="刷新剪贴板">刷新</button><button id="collapse" title="收起并暂停读取" aria-label="收起预览">−</button></header>
+  <pre id="text" aria-label="剪贴板内容">正在读取…</pre>
+  <footer><span id="status" role="status">等待页面焦点</span><button id="expand">展开</button></footer>
+  <div id="note">仅展示，不会更新可信记录。</div>
+</main>
+<button id="restore" hidden title="点击展开，按住拖动">剪贴板 · 展开</button>
+<script src="preview.js"></script><script src="preview-drag.js"></script></body></html>
